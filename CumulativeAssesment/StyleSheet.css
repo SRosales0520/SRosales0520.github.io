@@ -1,0 +1,71 @@
+﻿body {
+
+}
+
+.itemsbutton
+{
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.shopbutton
+{   
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+    position:fixed; 
+    float: right;
+    border: 2px solid black;
+}
+
+.ytvideo
+{
+    align-content:center;
+    margin-left:20%;
+    margin-top:5%;
+    height: 300px;
+    width: 60%;
+}
+
+.website
+{
+    align-content:center;
+    margin-left:20%;
+    margin-top:5%;
+    height: 300px;
+    width: 60%;
+}
+
+.websiteanchor
+{
+    text-align:center;
+    margin-left:20%;
+    margin-top:5%;
+}
+
+.iframe-container
+{
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    resize:both;
+    width:650px;
+    height:350px;
+}
+
