@@ -1,0 +1,99 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <meta charset="utf-8" />
+
+    <style>
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #ff0000;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+
+        #submitbutton:hover {
+            background-color: #CC0000;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="padding-left:30px">
+        <h1>The Wardrobe of Wonders</h1>
+        <h4><i>A place to buy clothes for cheap!</i></h4>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div style="position:absolute; top:200px; left:100px;">
+        <form method="get">
+            <!--the following inputs are for the user to type their information regarding their address, postal caode, and city into a text box-->
+            <label style="background: #ff0000; padding:3px 5px;color: white; border: 2px solid black;" for="address"><b>Address:</b></label>
+            <input style="height:20px" type="text" name="address" placeholder="please enter your address"
+                   size="30" maxlength="100" id="address" />
+            <br />
+            <br />
+            <label style="background: #646464; padding:3px 5px;color: white; border: 2px solid black;" for="postal code"><b>Postal Code:</b></label>
+            <input type="text" name="Postal code" placeholder="please enter your postal code"
+                   size="30" maxlength="100" id="postal code" />
+            <br />
+            <br />
+            <label style="background: #000000; padding:3px 5px;color: white; border: 2px solid black;" for="city"><b>City:</b></label>
+            <input type="text" name="city" placeholder="please enter the name of your city"
+                   size="30" maxlength="100" id="city" />
+
+            <!-- 3 selectable dots to choose which type of shipping you would like along with a paragraph telling you to choose a shipping method -->
+            <p>
+                <strong><i>choose a shipping method.</i></strong>
+            </p>
+            <select>
+                <option value="Standard Shipping">Standard Shipping</option>
+                <option value="One-Day Shipping">One-Day Shipping</option>
+                <option value="Two-Day Shipping">Two-Day</option>
+            </select>
+            <!-- 3 radio type selection options for whether you want to pay with paypal, debit, or credit.
+                theres also a paragraph telling you to select a payment method-->
+            <p>
+                <strong><em>Please select payment method</em></strong>
+            </p>
+            <br />
+            <img src="images/mastercard_logo.png" style="position:absolute; left:105px;top:400px;width:45px; height:30px;" />
+            <img src="images/mastercard_logo.png" style="position:absolute; left:200px;top:400px;width:45px; height:30px;" />
+            <img src="images/paypal_PNG22.png" style="position:absolute; left:25px;top:395px;width:35px; height:35px;" />
+            <label> <input type="radio" name="Payment" value="PayPal" checked="1" />PayPal </label>
+            <label> <input type="radio" name="Payment" value="Debit Card" />Debit Card</label>
+            <label> <input type="radio" name="Payment" value="Credit Card" />Credit Card</label>
+            <br />
+            <br />
+            <br />
+            <!-- a textbox where you can put in other comments about your order-->
+            <textarea style="height:100px" name="comments" id="comments" nrows="4" cols="50" placeholder="comments about order can be made here"></textarea>
+            <br />
+            <br />
+            <label><input type="checkbox" name="email update" checked /> Sign me up for email updates</label>
+            <label><input type="checkbox" name="save info" checked />Save my payment info</label>
+            <br />
+            <br />
+            <input id="submitbutton" type="submit" value="submit" />
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!--
+Name: Samuel Rosales
+Course: Web Development
+Teacher: Scott Hardman
+School: Pembina Trails Early College
+Date Last Modified: November 17th, 2019
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Wardrobe of Wonders!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="text/hmtl;charset=iso-8859-2" http-equiv="Content-Type" />
+    <link rel="stylesheet" href="StyleSheet.css">
+    <meta charset="utf-8" />
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        #redshopnowbutton:hover, #redshopnowbutton:focus {
+            background-color: #CC0000;
+            box-shadow: inset 0 0 0 5px #000000;
+        }
+
+        #greycheckoutbutton {
+            background-color: #646464;
+        }
+
+            #greycheckoutbutton:hover, #greycheckoutbutton:focus {
+                background-color: #545454;
+                box-shadow: inset 0 0 0 5px #000000;
+            }
+
+        #blackloginbutton:hover, #blackloginbutton:focus {
+            color: lightgray;
+        }
+
+        nav {
+            display: inline-block;
+            margin-top: 25px;
+            margin-left: 85%;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 15px;
+        }
+
+        header {
+            display: inline-block;
+        }
+
+        ul {
+            display: inline-block;
+            list-style: none;
+        }
+
+        li {
+            display: inline-block;
+            margin-left: 15px;
+            margin-bottom: 50px;
+            float: right;
+        }
+
+        .shopbutton:hover {
+            box-shadow: inset 0 0 0 5px #000000;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div style="padding-left:30px;">
+            <h1>The Wardrobe of <span style="color:#7B0000">Wonders</span></h1>
+            <h4><i>A place to buy clothes for cheap!</i></h4>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="shopbutton" id="redshopnowbutton" href="shop.html"><i>Shop Now!</i></a></li>
+            <li><a class="shopbutton" id="greycheckoutbutton" href="Checkout.html"><i>Checkout!</i></a> </li>
+            <li><a class="shopbutton" id="blackloginbutton" style="background-color:black" href="login.html"><i>Login/Register</i></a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <br />
+        <br />
+        <h2 style="text-align:center"> New Arrivals</h2>
+        <br />
+        <br />
+        <!--these are the divs that hold the slideshow. in each div there are usually just images with a specific class to identify which images will be used in the carousel.
+            i also made them anchors so that they re linkable to a product page-->
+        <div class="leftSlide">
+            <a style="width:100%" href="images/smoketee.jpg"> <img class="mySlidesLeft" src="images/smoketee.jpg"></a>
+            <a style="width:100%" href="scarfacedeck.html"> <img class="mySlidesLeft" src="images/Supreme-Scarface-Split-Skateboard-Multi.jpg"></a>
+            <a style="width:100%" href="catinthehathoodie.html"> <img class="mySlidesLeft" src="images/Supreme-Cat-in-the-Hat-Hooded-Sweatshirt-Bright-Royal.jpg"></a>
+            <a style="width:100%" href="brooklynboxlogo.html"> <img class="mySlidesLeft" src="images/Supreme-Brooklyn-Box-Logo-Tee-White.jpg"></a>
+        </div>
+        <div class="rightSlide">
+            <a style="width:100%" href="smoketeepage.html"> <img class="mySlidesRight" src="images/Supreme-Skull-Pile-Skateboard-Multi.jpg"></a>
+            <a style="width:100%" href="scarfacedeck.html"> <img class="mySlidesRight" src="images/Supreme-S-Logo-Colorblocked-Hooded-Sweatshirt-Black.jpg"></a>
+            <a style="width:100%" href="catinthehathoodie.html"> <img class="mySlidesRight" src="images/Supreme-Nas-Tee-Black.jpg"></a>
+            <a style="width:100%" href="brooklynboxlogo.html"> <img class="mySlidesRight" src="images/Supreme-Cat-in-the-Hat-Skateboard-Green-1.jpg"></a>
+        </div>
+
+        <!--this is the javascript for the carousel that holds a for loop to loop though an index and in turn loops through images to display an image as block-->
+        <script>
+            var myIndexLeft = 0;
+            var myIndexRight = 0;
+            carouselLeft();
+            carouselRight();
+            function carouselLeft() {
+                var i;
+                var x = document.getElementsByClassName("mySlidesLeft");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndexLeft++;
+                if (myIndexLeft > x.length) { myIndexLeft = 1 }
+                x[myIndexLeft - 1].style.display = "block";
+                setTimeout(carouselLeft, 3000); // changes image every 3 seconds
+            }
+            function carouselRight() {
+                var i;
+                var x = document.getElementsByClassName("mySlidesRight");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndexRight++;
+                if (myIndexRight > x.length) { myIndexRight = 1 }
+                x[myIndexRight - 1].style.display = "block";
+                setTimeout(carouselRight, 3000); // changes image every 3 seconds
+            }
+        </script>
+
+
+
+        <iframe class="ytvideo" src="https://www.youtube.com/embed/0O0yi8YgYbs"
+                frameborder="0" allow="autoplay; encrypted-media;
+            picture-in-picture" allowfullscreen></iframe>
+
+        <iframe class="website" name="website" frameborder="0"> </iframe>
+        <a class="website" id="website" href="https://mistershardman.wixsite.com/ptec" target="website"> View Website</a>
+    </main>
+</body>
+</html>
