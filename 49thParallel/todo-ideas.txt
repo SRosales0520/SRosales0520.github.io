@@ -1,0 +1,23 @@
+TODO:
+- home page
+- 4th page
+- multimedia
+- change font for whole site
+- transormations, transitions, and animations
+- media queries
+- proper sass file structure(base, navigation)
+- one more javascript implementation
+- comment complicated code
+- indentation
+
+Ideas:
+- use the powerpoint auntie christa sent me for home page and 4th page ideas 
+  and content. one of these pages should have a form of media such as pictures, video, 
+  slideshow
+- add a footer to all pages with the logo and social media connections and other
+  basic info
+- use media queries 
+- use font that auntie christa sent me for whole of site
+- ask mr hardman about how i can structure my sass with my current css
+- use transformations or animations for navbar hover and other small things
+  such as the form submit button hover
