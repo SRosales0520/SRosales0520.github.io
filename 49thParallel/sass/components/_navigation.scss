@@ -1,82 +1,110 @@
-﻿.topnav {
+﻿
+
+nav {
+    padding: 1%;
+
+    .Bar {
+        margin-top: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover, &:active {
+            background-color: #9FA615;
+            color: black;
+        }
+    }
+
+}
+
+.TopNav {
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     overflow: hidden;
-    background-color: black;
 
-    .current {
-        background-color: #d4ebf2;
+    .Current {
+        background-color: #9FA615;
         color: black;
     }
 
-    .logo {
-        padding: 5px 0px;
-
-        &:hover {
-            background-color: black;
-            -webkit-animation-name: logo;
-            -webkit-animation-duration: 2s;
-            -webkit-transition: all 0.3s ease-in;
-            animation-name: logo;
-            animation-duration: 1.5s;
-            transition: all 0.3s ease-in;
-        }
-
-        .logoimage {
-            width: 90px;
-            height: 60px;
-
-        }
+    .LogoAnchor {
+        height: 6em;
+        flex-basis: 20%;
+        background-color: transparent;
+        padding-top: 0em;
     }
-}
 
-a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    flex: 1;
+    .LogoImage {
+        width: 8em;
+        height: 5.3em;
+    }
 
-    &:hover, &:active {
-        background-color: #d4ebf2;
-        color: black;
+    .RoundedLeft {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .RoundedRight {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    a {
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0.6em 0.7em;
+        text-decoration: none;
+        font-size: 1.5em;
+        flex: 1;
+        height: 1.6em;
+        background-color: #455560;
     }
 }
 
 
 
-@keyframes logo {
+
+.GradientSwoop {
+    height: 16em;
+    background: linear-gradient(to left, #455560 70%, #9FA615); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.InnerSwoop {
+    background-color: white;
+    height: 200px;
+    border-bottom-left-radius: 75px;
+}
+
+/*@keyframes navtext {
     0% {
-        transform: scale(0.25, 0.25);
+        transform: ;
     }
 
     25% {
-        transform: scale(0.50, 0.50);
+        transform: scale(1.30, 1.30);
     }
 
     50% {
-        transform: scale(0.25, 0.25);
+        transform: scale(1.25, 1.25);
     }
 
     100% {
-        transform: scale(0, 0);
+        transform: scale(1, 1);
     }
 }
+*/
 /*@media all and (max-width: 600px) {
 
-    .topnav {
-        flex-wrap: wrap;
-    }
+.topnav {
+flex-wrap: wrap;
+}
 
-    .topnav > a {
-        flex-basis: 50%;
-    }
+.topnav > a {
+flex-basis: 50%;
+}
 }
 
 @media all and (max-width: 400px) {
-    .topnav > a {
-        flex-basis: 100%;
-    }
+.topnav > a {
+flex-basis: 100%;
+}
 }*/

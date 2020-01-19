@@ -2,9 +2,141 @@
 <html>
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+
+    <style>
+        .ChristaImage {
+            float: left;
+            display: inline;
+            width: 75%;
+            /*height: 75%;*/
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            flex-basis: 50%;
+        }
+
+        .information {
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .InfoParagraph {
+            font-size: 25px;
+            text-align: left;
+            overflow-wrap: break-word;
+            flex-basis: 40%;
+            text-align: justify;
+        }
+
+        .InfoImage {
+            flex-basis: 50%;
+        }
+
+        #name {
+            font-weight: bold;
+            font-size: 40px;
+            color: #9FA615;
+        }
+
+        #certifications {
+            font-size: 25px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        #titles {
+            color: gray;
+            font-size: 30px;
+        }
+
+        #backToTop {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #backToTopAnchor {
+            display: none;
+            flex-direction: row-reverse;
+            float: right;
+            cursor: pointer;
+            margin-top: 30%;
+            position: fixed;
+        }
+
+
+
+        #backToTopImage {
+            width: 50%;
+            float: right;
+        }
+
+            #backToTopImage:hover {
+                transform: scaleX(50px);
+            }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="GradientSwoop">
+            <div class="InnerSwoop">
+                <nav>
+                    <div class="TopNav">
+                        <a class="LogoAnchor" href="index.html"><img class="LogoImage" src="images/49p logo CMYK.png" /> </a>
+                        <a class="RoundedLeft Bar" href="index.html"> Home</a>
+                        <a class="Current Bar" href="about.html"> About</a>
+                        <a class="Bar" href="contact.html"> Contact Me</a>
+                        <a class="RoundedRight Bar" href="#"> blank </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <div class="information">
+        <div class="InfoImage">
+            <img class="ChristaImage" src="images/Walkden_Christa.jpg">
+        </div>
+        <br />
+        <br />
+        <div class="InfoParagraph">
+            <p><span id="name">CHRISTA WALKDEN,</span> <span id="certifications">CPA (ND), MST, TEP®, CPA, CA</span></p>
+            <p id="titles">Senior Vice-President, Advanced Wealth Planning Ultra-High-Net-Worth Consultant</p>
+            <p>
+                As Senior Vice-President, Advanced Planning, Christa is responsible for the overall financial and estate planning offering which supports our clients and
+                advisors at Wellington-Altus Private Wealth.Christa brings over 20 years of tax, estate and financial planning experience to this role, with a background in
+                cross-border planning. She studied and worked at large accounting firms in both countries, giving her a unique perspective into how the tax environments
+                interact. As Vice President, Product Management with one of the industry’s leading financial planning software providers, she worked alongside financial
+                planning thought leaders across North America. Christa is also a seasoned public speaker, often asked to translate complex tax regulations into clear and
+                actionable advice.Christa earned her Certified Public Accountant (CPA) designation from the Minnesota State Board of Accountancy in 1997 after graduating
+                with her Bachelor of Commerce degree from the University of Manitoba. She is currently licensed with the state of North Dakota. She also completed In-depth
+                and In-residence Tax Courses (Levels I and II) from the Canadian Institute of Chartered Accountants and she attained her Master of Science in Taxation (MST)
+                from Golden Gate University. Most recently, Christa earned her Trust and Estate Practitioner designation (TEP®) as an experienced practitioner as well
+                as her Chartered Professional Accountant designation (CPA, CA).
+            </p>
+        </div>
+        <div id="backToTop">
+            <a id="backToTopAnchor" onclick="topFunction()" title="Back to top" href="#"><img id="backToTopImage" src="images/back-to-top.png" /></a>
+        </div>
+
+    </div>
+    <script>
+        var mybutton = document.getElementById("backToTopAnchor");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+                mybutton.style.display = "flex";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>
