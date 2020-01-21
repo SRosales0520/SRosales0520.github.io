@@ -2,19 +2,42 @@
 
 nav {
     padding: 1%;
+}
 
-    .Bar {
-        margin-top: 1.5em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.Bar {
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: font-size .35s ease-in-out;
 
-        &:hover, &:active {
-            background-color: #9FA615;
-            color: black;
-        }
+    &:hover, &:active {
+        background-color: #9FA615;
+        color: black;
+    }
+}
+
+@keyframes logoanimation {
+    0% {
+        transform: scale(1, 1);
     }
 
+    25% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    75% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 .TopNav {
@@ -36,17 +59,13 @@ nav {
     }
 
     .LogoImage {
-        width: 8em;
-        height: 5.3em;
+        max-width: 80%;
+        max-height: 80%;
+        animation-name: logoanimation;
+        animation-duration: 2s;
     }
 
-    .RoundedLeft {
-        border-radius: 10px 0px 0px 10px;
-    }
 
-    .RoundedRight {
-        border-radius: 0px 10px 10px 0px;
-    }
 
     a {
         color: #f2f2f2;
@@ -55,7 +74,6 @@ nav {
         text-decoration: none;
         font-size: 1.5em;
         flex: 1;
-        height: 1.6em;
         background-color: #455560;
     }
 }
@@ -74,37 +92,73 @@ nav {
     border-bottom-left-radius: 75px;
 }
 
-/*@keyframes navtext {
-    0% {
-        transform: ;
-    }
-
-    25% {
-        transform: scale(1.30, 1.30);
-    }
-
-    50% {
-        transform: scale(1.25, 1.25);
-    }
-
-    100% {
-        transform: scale(1, 1);
+@media screen and (max-width: 800px) {
+    .information {
+        flex-direction: column;
     }
 }
-*/
-/*@media all and (max-width: 600px) {
 
-.topnav {
-flex-wrap: wrap;
+@media screen and (min-width: 631px) {
+    .Bar {
+        margin-top: 1.5em;
+    }
+
+    .TopNav a {
+        height: 1.6em;
+    }
+
+    .LogoImage {
+        width: 8em;
+        height: 5.3em;
+    }
+
+    .Bar {
+        border-radius: 0px;
+    }
+
+    .RoundedLeft {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .RoundedRight {
+        border-radius: 0px 10px 10px 0px;
+    }
 }
 
-.topnav > a {
-flex-basis: 50%;
-}
+@media screen and (max-width: 630px) {
+    .TopNav {
+        display: grid;
+        grid-row-gap: 10px;
+        grid-column-gap: 5px;
+        grid-template-rows: 17% 17% 17%;
+        grid-template-columns: 49% 49%;
+        grid-template-areas: "logo home" "logo about" "contact blank";
+    }
+
+    #logo {
+        grid-area: logo;
+    }
+
+    #home {
+        grid-area: home;
+    }
+
+    #about {
+        grid-area: about;
+    }
+
+    #contact {
+        grid-area: contact;
+    }
+
+    #blank {
+        grid-area: blank;
+    }
+
+    .Bar {
+        height: 0.5em;
+        margin-top: 3%;
+    }
 }
 
-@media all and (max-width: 400px) {
-.topnav > a {
-flex-basis: 100%;
-}
-}*/
+

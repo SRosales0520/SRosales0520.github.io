@@ -1,110 +1,83 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title></title>
     <meta charset="utf-8" />
     <link type="text/css" href="css/style.css" rel="stylesheet" />
-    <style>
-        input[type=text], select {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            margin-top: 5%;
-            height: 20%;
-        }
-
-        #submitbutton {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background-color: #9FA615;
-            color: #455560;
-            padding: 10px 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 25px;
-            margin-bottom: 5%;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .labels {
-            background: #9FA615;
-            padding: 10px;
-            color: #455560;
-            border-radius: 5px;
-        }
-
-        #submitbutton:hover {
-            background-color: #7f8410;
-        }
-
-        #ContactContainer {
-            box-sizing: border-box;
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            margin-top: 3%;
-        }
-
-        #form {
-            width: 50%;
-            font-size: 25px;
-        }
-    </style>
-
-</head>
-<body>
+    <link type="text/css" href="css/contact.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
     <header>
-        <div class="GradientSwoop">
-            <div class="InnerSwoop">
-                <nav>
-                    <div class="TopNav">
-                        <a class="LogoAnchor" href="index.html"><img class="LogoImage" src="images/49p logo CMYK.png" /> </a>
-                        <a class="RoundedLeft Bar" href="index.html"> Home</a>
-                        <a class="Bar" href="about.html"> About</a>
-                        <a class="Current Bar" href="contact.html"> Contact Me</a>
-                        <a class="RoundedRight Bar" href="#"> blank </a>
-                    </div>
-                </nav>
+      <div class="GradientSwoop">
+        <div class="InnerSwoop">
+          <nav>
+            <div class="TopNav">
+              <a id="logo" class="LogoAnchor" href="index.html"
+                ><img class="LogoImage" src="images/49p logo CMYK.png" />
+              </a>
+              <a id="home" class="RoundedLeft Bar" href="index.html"> Home</a>
+              <a id="about" class="Bar" href="about.html"> About</a>
+              <a id="contact" class="Current Bar" href="contact.html">
+                Contact Me</a
+              >
+              <a id="team" class="RoundedRight Bar" href="team.html"> Team </a>
             </div>
+          </nav>
         </div>
+      </div>
     </header>
 
     <div id="ContactContainer">
-        <form id="form" >
-            <label class="labels" for="address"><b>Subject:</b></label>
-            <input id="EmailSubject" type="text" name="address" placeholder="enter subject of email"
-                   size="30" maxlength="100" />
-            <br />
-            <br />
-            <label class="labels" for="address"><b>Email Content:</b></label>
-            <textarea style="margin-top: 5%;width: 99%; height:130%;" type="text" id="EmailContent" placeholder="type email content here"
-                      size="100" maxlength="1000"></textarea>
-            <a href="#" onclick="submit()" id="submitbutton">Submit</a>
-        </form>
+      <form id="form">
+        <label class="labels"><b>Subject:</b></label>
+        <input
+          id="EmailSubject"
+          type="text"
+          name="address"
+          placeholder="enter subject of email"
+          size="30"
+          maxlength="100"
+        />
+        <br />
+        <br />
+        <label class="labels"><b>Email Content:</b></label>
+        <textarea
+          style="margin-top: 5%;width: 99%; height:130%;"
+          type="text"
+          id="EmailContent"
+          placeholder="type email content here"
+          size="100"
+          maxlength="1000"
+        ></textarea>
+        <a href="#" onclick="submit()" id="submitbutton">Submit</a>
+      </form>
     </div>
     <script>
-        function submit() {
-            var emailSubject = document.getElementById("EmailSubject").value.replace(/ /g, "%20");
-            var emailContent = "&body=" + document.getElementById("EmailContent").value.replace(/ /g, "%20");
-            var email = "sarosales@smail.pembinatrails.ca"
-            var mailto = "mailto:" + email + "?subject=" + emailSubject + emailContent;
-            var submitbutton = document.getElementById("submitbutton");
-            var initialhref = submitbutton.getAttribute("href");
-            var regexvar = new RegExp('#');
-            console.log(emailSubject);
-            console.log(emailContent);
-            console.log(email);
-            console.log(mailto);
-            submitbutton.href = initialhref.replace(regexvar, mailto);
-        }
-        
+      //a function to compile the user input into an email
+      function submit() {
+        //variable that gets the value of the EmailSubject id and uses regex to make all the spaces into %20 so it an be read properly by mailto
+        var emailSubject = document
+          .getElementById("EmailSubject")
+          .value.replace(/ /g, "%20");
+        //same concept as above except adding "&body=" so that mailto compiles the body text properly
+        var emailContent =
+          "&body=" +
+          document.getElementById("EmailContent").value.replace(/ /g, "%20");
+        var email = "sarosales@smail.pembinatrails.ca";
+        //concatenates all data collected and compiles it to be readable by mailto
+        var mailto =
+          "mailto:" + email + "?subject=" + emailSubject + emailContent;
+        var submitbutton = document.getElementById("submitbutton");
+        var initialhref = submitbutton.getAttribute("href");
+        var regexvar = new RegExp("#");
+        console.log(emailSubject);
+        console.log(emailContent);
+        console.log(email);
+        console.log(mailto);
+        // replaces each '#' character of something with the id of submitbutton with the mailto variable text
+        submitbutton.href = initialhref.replace(regexvar, mailto);
+      }
     </script>
-
-</body>
+  </body>
 </html>
