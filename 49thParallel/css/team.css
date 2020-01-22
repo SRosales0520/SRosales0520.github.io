@@ -1,35 +1,36 @@
-﻿body {
+﻿.teamContainer {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "teamChrista teamChristaParagraph" "teamSamuel teamSamuelParagraph";
 }
 
-.teamContainer {
-    display: grid;
-    grid-row-gap: 10px;
-    grid-column-gap: 5px;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "teamChrista teamChristaParagraph" "teamSamuel teamSamuelParagraph";
+#teamChrista {
+  width: 75%;
+  grid-area: teamChrista;
 }
 
-#teamChrista
-{
-    width: 75%;
-    grid-area: teamChrista;
+#teamChristaParagraph {
+  font-size: 30px;
+  grid-area: teamChristaParagraph;
 }
 
-#teamChristaParagraph
-{
-    font-size: 30px;
-    grid-area: teamChristaParagraph;
+#teamSamuel {
+  width: 85%;
+  grid-area: teamSamuel;
 }
 
-#teamSamuel
-{
-    grid-area: teamSamuel;
+#teamSamuelParagraph {
+  margin-top: 20%;
+  font-size: 30px;
+  grid-area: teamSamuelParagraph;
 }
 
-#teamSamuelParagraph
-{
-    margin-top: 20%;
-    font-size: 30px;
-    grid-area: teamSamuelParagraph;
+@media screen and (max-width: 982px) {
+  .teamContainer {
+    display: flex;
+    flex-direction: column;
+  }
 }
