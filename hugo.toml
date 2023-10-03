@@ -11,6 +11,9 @@ enableEmoji = true
 [markup.highlight]
 noClasses = false
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [params]
 author = "Samuel Rosales"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
@@ -45,6 +48,8 @@ customJS = []
 
 # Custom remote JS files
 customRemoteJS = []
+
+socialInFooter = true
 
 # If you want to use fathom(https://usefathom.com) for analytics, add this section
 # [params.fathomAnalytics]
@@ -136,7 +141,7 @@ url = "https://github.com/SRosales0520/"
 
 [[params.social]]
 name = "Repl"
-icon = "fa fa-2x fa-repl"
+icon = "fa fa-2x fa-code"
 weight = 3
 url = "https://replit.com/@SRosales0520/"
 
@@ -148,7 +153,7 @@ url = "https://app.hackthebox.com/users/1358369"
 
 [[params.social]]
 name = "TryHackMe"
-icon = "fa fa-2x fa-terminal"
+icon = "fa fa-2x fa-lock"
 weight = 5
 url = "https://tryhackme.com/p/d4rk"
 
@@ -166,9 +171,9 @@ weight = 2
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "Projects"
+name = "Certifications"
 weight = 3
-url = "projects/"
+url = "certifications/"
 
 [[languages.en.menu.main]]
 name = "Contact me"

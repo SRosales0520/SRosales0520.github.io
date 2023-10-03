@@ -1,18 +1,15 @@
 +++
-authors = ["Lone Coder"]
-title = "Emoji Support"
-date = "2023-07-07"
-description = "Guide to emoji usage in Hugo"
+authors = ["Samuel Rosales"]
+title = "Homelab Hardware Showcase"
+date = "2023-10-03"
+description = "An overview of my server hardware"
 tags = [
-    "hugo",
-    "markdown",
-    "emoji",
+    "server",
+    "hardware",
 ]
 categories = [
-    "syntax",
-    "theme demo",
+    "server",
 ]
-series = ["Theme Demo"]
 +++
 
 Emoji can be enabled in a Hugo project in a number of ways.

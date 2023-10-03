@@ -3,4 +3,5 @@ title = "Contact"
 slug = "contact"
 +++
 
-Follow me, @johndoe.
+Please contact me at info@samuelsportfolio.ca or through [LinkedIn](https://www.linkedin.com/in/sarosales) if you have any further questions, or would just like to reach out!
+
