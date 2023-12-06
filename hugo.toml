@@ -22,7 +22,7 @@ keywords = "blog,portfolio,security"
 info = ["Passionate about Cyber Security, Scripting", "and Ethical Hacking"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
-dateFormat = "October 1, 2023"
+dateFormat = "02 Jan 2006"
 since = 2023
 # Git Commit in Footer, uncomment the line below to enable it
 #commit = "https://github.com/luizdepra/hugo-coder/tree/"
@@ -140,7 +140,7 @@ weight = 2
 url = "https://github.com/SRosales0520/"
 
 [[params.social]]
-name = "Repl"
+#name = "Repl"
 icon = "fa fa-2x fa-code"
 weight = 3
 url = "https://replit.com/@SRosales0520/"
@@ -148,6 +148,7 @@ url = "https://replit.com/@SRosales0520/"
 [[params.social]]
 name = "HackTheBox"
 icon = "fa fa-2x fa-terminal"
+#iconCustom = "/images/your-request-is-my-demand.png"
 weight = 4
 url = "https://app.hackthebox.com/users/1358369"
 
