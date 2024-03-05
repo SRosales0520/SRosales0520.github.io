@@ -15,5 +15,5 @@ You can find me and my work on the following platforms:
 * [LinkedIn](https://www.linkedin.com/in/sarosales/)
 * [GitHub](https://github.com/SRosales0520/)
 * [Replit \(More Code\)](https://replit.com/@SRosales0520/)
-* [HackTheBox](https://app.hackthebox.com/users/1358369)
+* [HackTheBox](https://app.hackthebox.com/profile/1358369)
 * [TryHackMe](https://tryhackme.com/p/d4rk)

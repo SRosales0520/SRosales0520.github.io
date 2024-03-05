@@ -150,7 +150,7 @@ name = "HackTheBox"
 icon = "fa fa-2x fa-terminal"
 #iconCustom = "/images/your-request-is-my-demand.png"
 weight = 4
-url = "https://app.hackthebox.com/users/1358369"
+url = "https://app.hackthebox.com/profile/1358369"
 
 [[params.social]]
 name = "TryHackMe"
