@@ -23,7 +23,7 @@ Hardware Specs:
 | RAM | Samsung DDR4-240mhz | 2x32 GB |
 | SSD | Samsung 860 Evo | 1x500 GB |
 | SSD | Crucial MX500 | 1x500 GB
-| HDD | Ironwolf 5600 RPM CMR | 2x6 TB |
+| HDD | Ironwolf 5400 RPM CMR | 2x6 TB |
 | HDD | WD Green | 1x3 TB |
 | NIC | Ethernet | 2.5 gig |
 | NIC | SFP | 10 gig |

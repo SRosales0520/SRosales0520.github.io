@@ -32,14 +32,18 @@ I have a home media server container that uses the "arr" suite of services to ma
 ### VPN Server
 I utilize a wireguard server in a container to allow me to remote into my home network and manage my server. I can tunnel in from my laptop or phone, and prefer this method over making things open to the internet because I would have to be extremely thorough with my securing of services. 
 
-### Docker Server
-This machine hosts dockerised services such as the arr suite. This also hosts a LanCache that acts as a local DNS server on my lan with cached game installs. I can change the DNS settings on my gaming PC to point to the LanCache, and then instead of installing steam games through the internet, I can install cached games at LAN speeds. These cached games keep themselves updated automatically. The MX500 SSD serves as the storage for these games as you want to maximise the storage performance when installing games over the LAN. I hade a PiHole set up to block ads, but it interfered with DNS configurations of the LanCache
+### K3s
+Two instances of K3s, a lightweight version of K8s that are set up to be connected together and provide a failover for containers to move to a different machine in case of host failure. In this case I have just been practising, so the containers don't serve any purpose
 
 ### Windows Server Domain Controllar and Clients
 I have set up a practice domain with a domain controller and client PC to practice windows server administration and emulate a business environment. Currently I have only gone so far as to practive active directory management on it, but there is much more windows server functionality I have yet to configure and practice on it. 
 
 ### Vulnerable Machines/WebApps
 I plan on hosting purposefuly vulnerable windows and linux machines, as well as host web apps from the OWASP Vulnerable Web Applications so that I can practice on them.
+
+
+### Docker Server
+This machine hosts dockerised services such as the arr suite. This also hosts a LanCache that acts as a local DNS server on my lan with cached game installs. I can change the DNS settings on my gaming PC to point to the LanCache, and then instead of installing steam games through the internet, I can install cached games at LAN speeds. These cached games keep themselves updated automatically. The MX500 SSD serves as the storage for these games as you want to maximise the storage performance when installing games over the LAN. I hade a PiHole set up to block ads, but it interfered with DNS configurations of the LanCache
 
 ### Backups
 Container and VM images have snapshots taken and stored on a separate SSD in case a misconfiguration is made, or recovery is needed. These snapshots happen on a scheduled basis
